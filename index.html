@@ -14,9 +14,10 @@
   <body>
     <nav></nav>
     <main>
+      hi
       <script>
-        var visited=[];
-        var data2=[];
+        var visited = [];
+        var data2 = [];
         const data = [
           { region: 'US', model: 'A', sales: 150 },
           { region: 'US', model: 'B', sales: 120 },
@@ -29,14 +30,16 @@
           { region: 'CA', model: 'C', sales: 230 },
           { region: 'CA', model: 'D', sales: 400 },
         ];
-        data.forEach(item) =>{
-          if (!visited.contains(item.region)){
-            data2.push(data.map(data => item.region));
-          }
-          else {
+        var temp = {};
+        data.forEach((item) => {
+          if (!visited.includes(item.region)) {
+            temp.push(item);
+          } else {
             visited.push(item.region);
+            data2.push(temp);
+            temp = [];
           }
-        }
+        });
         console.log(data);
         console.log(data2);
       </script>
