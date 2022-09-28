@@ -31,14 +31,14 @@
         ];
         data.forEach(item) =>{
           if (!visited.contains(item.region)){
-            data.map(data => item.region);
+            data2.push(data.map(data => item.region));
           }
           else {
             visited.push(item.region);
           }
         }
-
         console.log(data);
+        console.log(data2);
       </script>
     </main>
   </body>
