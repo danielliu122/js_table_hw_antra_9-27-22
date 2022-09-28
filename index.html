@@ -30,7 +30,12 @@
           { region: 'CA', model: 'D', sales: 400 },
         ];
         data.forEach(item) =>{
-          data.map(data => item.region);
+          if (!visited.contains(item.region)){
+            data.map(data => item.region);
+          }
+          else {
+            visited.push(item.region);
+          }
         }
 
         console.log(data);
